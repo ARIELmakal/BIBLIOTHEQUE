@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReadEra - bibliothèque en ligne</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.auteur{
+    font-size: 25px;
+}
+.livre{
+    font-size: larger;
+    padding-bottom: 5px;
+}
+img{
+    height: 20%;
+    width: 20%;
+}
+button{
+    padding: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 20%;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.8);
+    border-radius: 10px;
+    color: #fff;
+}
+
+</style>
+<body>
+    {% block content %} {% endblock %}
+    <header>
+        <h1>ReadEra</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Livres</a></li>
+                <li><a href="#">Auteurs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bienvenue sur ReadEra!</h2>
+            <p>Découvrez notre vaste collection de livres en ligne.</p>
+        </section>
+
+        <section>
+            <h2>Nouveautés</h2>
+            <!-- Ajoutez ici une liste de livres récemment ajoutés -->
+            <section>
+                {% block section %} {% endblock section %}
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ReadEra. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+

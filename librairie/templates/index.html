@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block section %}
+    <div>
+        {% for livre in livres %}
+            <div>
+                <img src="{{ livre.image.url }}" alt="">
+                <p class="auteur"><h4>Auteur:</h4>{{ livre.Auteur }}</p>
+            </div>
+            <div>
+                <p class="livre">
+                    <h4>Livre:</h4>{{ livre.livre }}
+                </p>
+            </div>
+            <div>
+                <p class="livre">
+                    <h4>Description:</h4>{{ livre.Description }}
+                </p>
+                <button>Ajouter ce livre</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock section %}
+
